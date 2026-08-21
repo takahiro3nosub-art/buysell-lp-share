@@ -4,6 +4,8 @@
    注釈の『上余白0』のような指定が前の要素の下余白に負けて効かなくなる。 */
 *{box-sizing:border-box}
 /* 手本の実測: body{background:#F4F4F4;font-size:17px} .article-body{font-size:17px;line-height:1.8;padding:15px 20px;background:#fff} */
+/* ★横方向にはみ出させない。スマホで指で横に動かせてしまう事故を構造で止める（2026-08-21） */
+html,body{overflow-x:clip;max-width:100%}
 body{margin:0;background:#F4F4F4;font-size:17px;font-family:"Hiragino Sans",Arial,sans-serif;color:#1b1c1d;word-wrap:break-word}
 .wrap{max-width:375px;margin:0 auto;background:#fff;padding:15px 20px 60px;position:relative;
  font-size:17px;line-height:1.8}
@@ -152,6 +154,7 @@ h2.hd-peak .t-tail{display:block;font-size:18px;font-weight:400}  /* 山場で�
  pointer-events:none;transform:rotate(14deg);
  background:linear-gradient(105deg,transparent,rgba(255,255,255,.85) 45%,rgba(255,255,255,.95) 55%,transparent);
  animation:cta-shine 3.2s ease-in-out infinite}
+/* ★等倍を超えない（0.97→1.0）。拡大すると実機375pxで横にはみ出し、指で横に動かせてしまう（2026-08-21） */
 @keyframes cta-pulse{0%,100%{transform:scale(1)}45%{transform:scale(1.028)}}
 @keyframes cta-shine{0%{left:-60%}45%,100%{left:120%}}
 @keyframes cta-flash{0%,26%{opacity:0}34%{opacity:.22}46%,100%{opacity:0}}

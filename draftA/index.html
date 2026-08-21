@@ -1,19 +1,22 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>バイセル 記事LP（参考①トレース）</title><style>*{box-sizing:border-box}
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>バイセル 記事LP（参考①トレース）</title><style>/* ★余白の方針（2026-08-21）: 縦の間隔は「上」だけで作る。
+   margin-bottom / padding-bottom は使わない。下に余白があると、
+   注釈の『上余白0』のような指定が前の要素の下余白に負けて効かなくなる。 */
+*{box-sizing:border-box}
 /* 手本の実測: body{background:#F4F4F4;font-size:17px} .article-body{font-size:17px;line-height:1.8;padding:15px 20px;background:#fff} */
 body{margin:0;background:#F4F4F4;font-size:17px;font-family:"Hiragino Sans",Arial,sans-serif;color:#1b1c1d;word-wrap:break-word}
 .wrap{max-width:375px;margin:0 auto;background:#fff;padding:15px 20px 60px;position:relative;
  font-size:17px;line-height:1.8}
 .badge{position:static;top:0;margin:0 -20px;padding:8px 12px;font-size:12px;color:#fff;background:#1a7f5a}
-.blk{line-height:1.75;padding:6px 0;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
-figure{margin:14px -20px}
+.blk{line-height:1.75;padding:6px 0 0;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
+figure{margin:14px -20px 0}
 figure img{display:block;width:100%;height:auto}
 .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
  min-height:150px;margin:0;border:2px dashed #bbb;background:#fafafa;color:#999;
  font-size:12px;text-align:center;padding:14px}
 .ph b{font-size:15px;color:#666}
 .ph em{font-style:normal;font-size:11px;color:#aaa}
-.say{display:flex;gap:10px;align-items:flex-start;padding:10px 0}
+.say{display:flex;gap:10px;align-items:flex-start;padding:10px 0 0}
 .say img{width:55px;min-width:55px;border-radius:50%;margin:0}
 /* 手本 .says:before と同じ左向きの三角。CSSで描かれていてテキストには出ない */
 .say p{margin:0;position:relative;font-size:16px;line-height:1.6;background:#f4f6f8;
@@ -21,7 +24,7 @@ figure img{display:block;width:100%;height:auto}
  word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 .say p::before{content:"";position:absolute;top:22px;left:-23px;margin-top:-11px;
  border:11px solid transparent;border-right-color:#f4f6f8;width:0;height:0}
-h2.hd,h3.hd{margin:22px 0 8px;padding:10px 12px;line-height:1.5;word-break:keep-all;line-break:strict;overflow-wrap:anywhere;
+h2.hd,h3.hd{margin:22px 0 0;padding:10px 12px;line-height:1.5;word-break:keep-all;line-break:strict;overflow-wrap:anywhere;
  color:#ff6a6a;background:#fffff4;border-left:5px solid #ff6a6a;border-radius:3px;text-align:left}
 h2.hd{font-size:21px}
 /* 手本の山場（記事全体で2箇所だけ）。濃黄ベタ #ffd900 */
@@ -37,11 +40,11 @@ h2.pt-hd{background:#fffff4;border-left:none;border-top:2px dotted #f5b8bd;
 h2.pt-hd .pt{flex:none;font-style:normal;font-size:12px;font-weight:800;letter-spacing:.04em;
  color:#fff;background:#ff6a6a;border-radius:999px;padding:5px 10px;white-space:nowrap}
 h3.hd{font-size:19px;color:#002966;background:none;border-left:4px solid #002966}
-ul.opt{list-style:none;margin:8px 0 14px;padding:0}
-ul.opt li{border:2px solid #dfe3e8;border-radius:10px;padding:11px 14px;margin:7px 0;
+ul.opt{list-style:none;margin:8px 0 0;padding:0}
+ul.opt li{border:2px solid #dfe3e8;border-radius:10px;padding:11px 14px;margin:7px 0 0;
  font-size:16px;text-align:center;background:#fff;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 /* 手本 #37：上下にピンクの細線、中央揃え、黒文字 */
-p.lead{margin:22px 0 10px;padding:16px 6px;font-size:17px;font-weight:700;line-height:1.7;
+p.lead{margin:22px 0 0;padding:16px 6px;font-size:17px;font-weight:700;line-height:1.7;
  color:#1b1c1d;text-align:center;border-top:2px solid #e95295;border-bottom:2px solid #e95295;
  background:#fff}
 /* テスト用ブロックID。本文の外（左の余白）に出す。
@@ -58,13 +61,13 @@ body.clean .blk-id{display:none}
 @media (max-width:519px){ .blk-id{display:none} }   /* 余白が無い幅では出さない（520px以上で出る） */
 /* 手本 .check-list：紺の2px枠＋白地＋影。上辺中央にタイトルが乗る */
 .check-list{border:solid 2px #002966;background:#fff;box-shadow:2px 2px 1px #ccc;
- padding:1.8em 1em 1.2em;margin:2.2em 0;position:relative}
-.check-list-title{color:#002966;background:#fff;display:block;margin:0 auto .6em;
+ padding:1.8em 1em 1.2em;margin:2.2em 0 0;position:relative}
+.check-list-title{color:#002966;background:#fff;display:block;margin:0 auto;
  padding:.25em 1em;font-weight:600;text-align:center;font-size:15px}
 .check-list-item{display:flex;align-items:center;justify-content:center;gap:.5em;
  text-align:center;line-height:1.7;padding:2px 0}
 /* 手本 .cp_arrow：CSSで描いた下向き矢印（棒40x3px・±30度） */
-.cp-arrow{position:relative;height:34px;margin:6px 0}
+.cp-arrow{position:relative;height:34px;margin:6px 0 0}
 .cp-arrow::before,.cp-arrow::after{content:"";position:absolute;top:6px;left:50%;
  width:40px;height:3px;background:#c9ced6;display:block}
 .cp-arrow::before{transform:rotate(30deg) translateX(-39%);transform-origin:top left}
@@ -80,7 +83,7 @@ h2.hd-peak .t-bottom{display:block;position:relative;font-size:22px;line-height:
 h2.hd-peak .t-main{font-size:34px;font-weight:800}
 /* .border-box.blink：赤5px枠＋四隅が点滅 */
 .border-box{width:100%;padding:5%;border:5px solid #ff0000;background:#fff;color:#000;
- font-size:20px;font-weight:700;text-align:center;position:relative;box-sizing:border-box;margin:1.4em 0}
+ font-size:20px;font-weight:700;text-align:center;position:relative;box-sizing:border-box;margin:1.4em 0 0}
 .border-box::before,.border-box::after{content:"";display:block;position:absolute;width:20px;height:20px;z-index:1}
 .border-box::before{border-top:5px solid #ff0000;border-left:5px solid #ff0000;top:-5px;left:-5px}
 .border-box::after{border-bottom:5px solid #ff0000;border-right:5px solid #ff0000;bottom:-5px;right:-5px}
@@ -88,25 +91,25 @@ h2.hd-peak .t-main{font-size:34px;font-weight:800}
 .border-box.blink::before,.border-box.blink::after{animation:border-blink 2.5s infinite}
 @media (prefers-reduced-motion:reduce){.border-box.blink::before,.border-box.blink::after{animation:none}}
 /* .box：クリーム地＋ピンク枠＋左上に赤い斜線 */
-.box{position:relative;margin:1em auto;background:#fff9eb;box-shadow:2px 2px 5px rgba(0,0,0,.25);
+.box{position:relative;margin:1em auto 0;background:#fff9eb;box-shadow:2px 2px 5px rgba(0,0,0,.25);
  border:solid #fc9db8 1px;padding:14px 12px;text-align:center;box-sizing:border-box;line-height:1.75}
 .box::before{position:absolute;content:"";width:28px;height:2px;background:red;top:15px;left:3px;transform:rotate(-45deg)}
 .box::after{position:absolute;content:"";width:28px;height:2px;background:red;top:15px;right:3px;transform:rotate(45deg)}
 /* .listItem__area＋.items：サーモンの角丸枠＋赤い四角のリストマーカー */
 .listItem__area{width:100%;font-size:16px;border-width:1px 2px 2px 1px;border-style:solid;
- border-color:#f06666;border-radius:10px;background:#fff;padding:14px 6px;margin:1.2em 0}
+ border-color:#f06666;border-radius:10px;background:#fff;padding:14px 6px;margin:1.2em 0 0}
 .listItem__area .items{padding:0 1em;list-style:none;margin:0}
 .listItem__area .items li{font-weight:700;padding-left:1.5em;margin-top:.5em;position:relative;text-align:left}
 .listItem__area .items li::before{content:"";width:.8em;height:.8em;display:block;
  border:2px solid #c7243a;position:absolute;top:.35em;left:0}
 /* .mybox：ピンク地＋内側の白い線 */
 .mybox{background:#f6d4d8;border-radius:5px;padding:20px;position:relative;z-index:0;
- box-sizing:border-box;margin:1.2em 0;text-align:center;line-height:1.75}
+ box-sizing:border-box;margin:1.2em 0 0;text-align:center;line-height:1.75}
 .mybox::before{border:1px solid #fff;border-radius:5px;margin:4px;content:"";display:block;
  position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1}
 /* .rank-footer-list：✔ のチェックリスト */
 .rank-footer-list{list-style:none;margin:0;padding:0}
-.rank-footer-list li{margin-bottom:10px;padding-left:1.4em;position:relative;line-height:1.6;
+.rank-footer-list li{margin-top:10px;padding-left:1.4em;position:relative;line-height:1.6;
  font-weight:700;text-align:left}
 .rank-footer-list li::before{content:"✔";position:absolute;left:0;top:0;color:#ff6a6a;font-weight:700}
 /* .cta-image-wrap：CTA画像に走る細い光の帯 */
@@ -130,7 +133,7 @@ h2.hd-peak .t-main{font-size:34px;font-weight:800}
 .cta-todo::after{content:"遷移先URL未設定";position:absolute;right:6px;bottom:6px;
  font-size:10px;color:#fff;background:#c0392b;border-radius:3px;padding:2px 6px;letter-spacing:.02em}
 /* 共通ルール（2026-08-21）: 注釈は 右寄せ／10px／#696969／上余白0 */
-.note{font-size:10px;color:#696969;line-height:1.6;margin:0;padding:0 0 6px;text-align:right}
+.note{font-size:10px;color:#696969;line-height:1.6;margin:0;padding:0;text-align:right}
 /* 共通ルール: 記事冒頭のPR表記は 右寄せ／上下余白0／10px／#696969 */
 .pr-line{font-size:10px;color:#696969;text-align:right;margin:0;padding:0;line-height:1.6}
 .foot{margin-top:40px;padding-top:16px;border-top:1px solid #ddd;font-size:11px;color:#888;line-height:1.8}
